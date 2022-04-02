@@ -1,0 +1,11 @@
+header {
+    .container {
+        @extend %container;
+        .logo {
+            width: 50px;
+        }
+        .flex {
+            display: flex;
+        }
+    }
+}
