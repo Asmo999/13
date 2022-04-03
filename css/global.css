@@ -61,10 +61,28 @@ a {
           box-sizing: border-box;
 }
 
-header .container {
+header .container, section .container {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  header .container, section .container {
+    width: 90%;
+  }
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .container .logo {
@@ -75,5 +93,63 @@ header .container .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 500px;
+}
+
+header .container .flex > li {
+  color: green;
+  font-size: 25px;
+}
+
+section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .container .Lorem-test {
+  color: blue;
+  letter-spacing: 1.3px;
+  line-height: 30px;
+  max-width: 400px;
+}
+
+section .container .Lorem-test:hover::first-letter {
+  color: green;
+}
+
+section .container .Lorem-test::first-letter {
+  color: blueviolet;
+}
+
+section .container .Bird-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section .container .Bird-flex .Birds {
+  width: 300px;
+  height: 150px;
+}
+
+@media (max-width: 822px) {
+  section .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=global.css.map */
